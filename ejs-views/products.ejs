@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <a href="/" class="home">домой</a>
+    <button><a href="/add">Добавить блюдо</a></button>
+    <h1>А вот и наша еда:</h1>
+
+        <ul>
+            <% allFoods.forEach(({id, name, price, img})=> { %>
+
+            <li>
+                <div class="">
+                    <h2><%= name %></h2>
+                    <img width = 400 height = 300 src="<%= img %>" alt="">
+                    <p><%= price %> руб.</p>
+                </div>
+
+            </li>
+            <% }) %>
+
+        </ul>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+ body {
+
+    height: 100vh;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1643819640_8-abrakadabra-fun-p-temnii-fon-dlya-yedi-8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(226, 198, 106);
+    font-size: 30px;
+    display: block;
+    transition:  color 0.5s;
+    margin-top: 15px;
+}
+
+a:hover{
+    color: rgb(153, 54, 128);
+
+}
+
+div{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+}

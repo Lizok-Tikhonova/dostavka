@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>name: <%= peop.name%></span>
+    <span>surname: <%= peop.surname%></span>
+    <button ><a href="/zakaz">вернуться</a></button>
+    <!-- <form method="delete" action="./zakaz/:id"> -->
+    <button class="dd" data-id = "<%= peop.id%>" >удалить</button>
+        
+    <!-- </form> -->
+    <button>редактировать</button>
+    
+    <script>
+        let btnDel = document.querySelector(".dd")
+        document.addEventListener("click", (e)=>{
+            const id = e.target.dataset.id || null
+            if(id){
+                fetch(`/zakaz/${id}`,{
+                    method: "DELETE",  
+                }).then(()=>{
+                    window.location.href = '/zakaz'
+                })
+            }
+        })
+    </script>
+</body>
+</html>

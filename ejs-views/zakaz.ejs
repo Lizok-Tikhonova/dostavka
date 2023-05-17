@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">домой</a>
+    <form method="post" action="./zakaz">
+        <input name="name">
+        <input name="surname">
+        <button>ok</button>
+    </form>
+    <h1>Наши покупатели</h1>
+
+        <ul>
+            <% arrPeople.forEach(({id, name, surname})=> { %>
+
+            <li>
+                <div class="div">
+                    
+                    <h2><%= name %></h2>
+                    <h2><%= surname %> </h2>
+                    <button class="but"><a href="./zakaz/<%=id%>">подробнее</a></button>
+                </div>
+                
+            </li>
+            <% }) %>
+          
+        </ul>
+
+
+
+    
+</body>
+</html>
